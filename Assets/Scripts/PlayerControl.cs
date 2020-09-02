@@ -3,7 +3,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerControl : MonoBehaviour {
 
-    //[SerializeField] GameObject[] guns;
+    [SerializeField] GameObject[] guns;
 
     [Tooltip("In ms")] [SerializeField] float Speed = 20f;
     [Tooltip("In meter")] [SerializeField] float xRange = 5.5f;
@@ -22,8 +22,7 @@ public class PlayerControl : MonoBehaviour {
     bool isControlEnabled = true; //control enable = player alive, control disabled = player dead or colliding
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if (isControlEnabled) {
             ProcessMovement();
             ProcessRotation();
@@ -63,22 +62,17 @@ public class PlayerControl : MonoBehaviour {
     }
 
     private void ProcessFiringBullets() {
-        //if (CrossPlatformInputManager.GetButton("Fire")) {
-         //   fireAttack();
-        //} else {
-         //   disableFire();
-        //}
+        if (CrossPlatformInputManager.GetButton("Fire")) {
+            setFireActiveDisable(true);
+        } else {
+            setFireActiveDisable(false);
+        }
     }
 
-    private void fireAttack() {
-        //foreach (GameObject gun in guns) {
-         //   gun.SetActive(true);
-        //}
-    }
-
-    private void disableFire() {
-        //foreach (GameObject gun in guns) {
-         //   gun.SetActive(false);
-        //}
+    private void setFireActiveDisable(bool isActive) {
+        foreach (GameObject gun in guns) {
+            var laserParticle = gun.GetComponent<ParticleSystem>().emission;
+            laserParticle.enabled = isActive;
+        }
     }
 }
