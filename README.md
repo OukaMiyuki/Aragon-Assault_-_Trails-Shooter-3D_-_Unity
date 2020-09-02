@@ -8,3 +8,5 @@ Feel free to donwload the project and use whatever you want to use.
 
 2. Monday, August 31, 2020 - 20:42 => Added some obstacles, player ship, landing pad, splash scene, gameplay music, scene loader scripts & player control movement (also use cross-platform input from unity standart assets) | [Unity standart assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351) |
 [Rock assets link1](https://assetstore.unity.com/packages/3d/props/exterior/rock-package-118182) | [Player Ship](https://assetstore.unity.com/packages/3d/vehicles/space/star-sparrow-modular-spaceship-73167) | [Rock assets link 2](https://assetstore.unity.com/packages/3d/props/exterior/hq-rock-pack-free-83388) | [Landing Pad](https://assetstore.unity.com/packages/3d/environments/urban/low-poly-street-pack-67475) (not actually a landing pad assets but hey, pretty much close right? I'm not an artist btw so yeah...)
+
+3. Wednesday, September 03, 2020 - 13:24 => Added bullet oarticles on player's script, player's collision, death and explosions particles
